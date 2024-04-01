@@ -1,6 +1,6 @@
 FROM node:latest
 
-WORKDIR /usr/src/app
+WORKDIR /home/greyes/app
 
 COPY package*.json ./
 RUN npm install

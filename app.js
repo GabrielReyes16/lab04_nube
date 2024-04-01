@@ -6,11 +6,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/clientes', (req, res) => {
-    res.send('Mostrando 3 clientes...');
+    res.send('Alan Garcia');
+    res.send('Dina Boluarte');
+    res.send('Pedro Castillo');
 });
 
 app.get('/productos', (req, res) => {
     res.send('Mostrando 3 productos...');
+    es.send('Arma de fuego');
+    es.send('Un Rolex');
+    es.send('Un pollo')
 });
 
 const PORT = 10101;
