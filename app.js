@@ -6,16 +6,24 @@ app.get('/', (req, res) => {
 });
 
 app.get('/clientes', (req, res) => {
-    const clientes = ['Alan Garcia', 'Dina Boluarte', 'Pedro Castillo'];
-    res.send(clientes.join(', ')); // Concatenamos los nombres y los enviamos
+    const clientes = ['Mostrando clientes','Alan Garcia', 'Dina Boluarte', 'Pedro Castillo'];
+    let listaClientes = '';
+    for (const cliente of clientes) {
+        listaClientes += cliente + '<br>';
+    }
+    res.send(listaClientes);
 });
 
 app.get('/productos', (req, res) => {
-    const productos = ['Arma de fuego', 'Un Rolex', 'Un pollo'];
-    res.send(productos.join(', ')); // Concatenamos los productos y los enviamos
+    const productos = ['Mostrando productos','Arma de fuego', 'Un Rolex', 'Un pollo'];
+    let listaProductos = '';
+    for (const producto of productos) {
+        listaProductos += producto + '<br>';
+    }
+    res.send(listaProductos);
 });
 
-const PORT = 10101;
+const PORT = 10150;
 app.listen(PORT, () => {
     console.log(`Servidor Express corriendo en el puerto ${PORT}`);
 });
