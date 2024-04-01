@@ -6,16 +6,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/clientes', (req, res) => {
-    res.send('Alan Garcia');
-    res.send('Dina Boluarte');
-    res.send('Pedro Castillo');
+    const clientes = ['Alan Garcia', 'Dina Boluarte', 'Pedro Castillo'];
+    res.send(clientes.join(', ')); // Concatenamos los nombres y los enviamos
 });
 
 app.get('/productos', (req, res) => {
-    res.send('Mostrando 3 productos...');
-    es.send('Arma de fuego');
-    es.send('Un Rolex');
-    es.send('Un pollo')
+    const productos = ['Arma de fuego', 'Un Rolex', 'Un pollo'];
+    res.send(productos.join(', ')); // Concatenamos los productos y los enviamos
 });
 
 const PORT = 10101;
